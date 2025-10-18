@@ -9,7 +9,15 @@
         {
           "name": "GlobalDurableObject",
           "class_name": "GlobalDurableObject"
-        }
+        },
+        {
+					"name": "CHAT_AGENT",
+					"class_name": "ChatAgent"
+				},
+				{
+					"name": "APP_CONTROLLER",
+					"class_name": "AppController"
+				}
       ]
     },
     "migrations": [
@@ -18,7 +26,15 @@
         "new_sqlite_classes": [
           "GlobalDurableObject"
         ]
-      }
+      },
+      {
+				"tag": "v1",
+				"new_sqlite_classes": ["ChatAgent"]
+			},
+			{
+				"tag": "v2",
+				"new_classes": ["AppController"]
+			}
     ],
 	"assets": {
 		"not_found_handling": "single-page-application",
@@ -26,5 +42,9 @@
 	},
 	"observability": {
 		"enabled": true
+	},
+	"vars": {
+		"CF_AI_BASE_URL": "https://gateway.ai.cloudflare.com/v1/49a9bd6b6b2cb448b0fd3a751f276556/vibesdk-gateway/google-ai-studio",
+		"CF_AI_API_KEY": "KI6thi-k8vDmZzhv_YXNVz_ddc79mHaPbFSukcFP"
 	}
 }
